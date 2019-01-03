@@ -36,11 +36,11 @@ public class GoogleStartPageTest {
 		driver.quit();
 	}
 
-
+// changed =! > == in assertTrue(bodyText != null);
 	@Test
 	public void pageBodyIsNotNull() throws MalformedURLException {
 		String bodyText = driver.findElement(By.tagName("body")).getText();
-		assertTrue(bodyText != null);
+		assertTrue(bodyText == null);
 	}
 
 
